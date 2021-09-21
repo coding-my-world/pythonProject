@@ -1,4 +1,4 @@
-4# 崔浩然
+# 崔浩然
 # 时间:2021/9/19 9:05
 # 功能：bs4的具体使用
 from bs4 import BeautifulSoup
