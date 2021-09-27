@@ -4,7 +4,7 @@
 from selenium import webdriver
 from time import sleep
 #后面是你的浏览器驱动位置，记得前面加r'', 'r'是防止字符转义的
-driver = webdriver.Chrome(r'./chromedriver.exe')
+driver = webdriver.Chrome(r'chromedriver.exe')
 #用get打开百度页面
 driver.get( "http://www.baidu.com")
 #查找页面的“设置"选项,并进行点击

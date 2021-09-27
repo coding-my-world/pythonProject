@@ -5,7 +5,7 @@ from selenium import webdriver
 from lxml import etree
 from time import sleep
 #实例化一个浏览器对象（传入浏览器的驱动程序）
-bro=webdriver.Chrome(executable_path='./chromedriver.exe')
+bro=webdriver.Chrome(executable_path='chromedriver.exe')
 url='http://scxk.nmpa.gov.cn:81/xk/'
 
 bro.get(url)

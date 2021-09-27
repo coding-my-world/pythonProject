@@ -23,7 +23,6 @@ class Application(Frame):
     
     def onclick1(self):
         messagebox.showinfo("message","叫你点你就点?")
-
 if __name__ =="__main__":
     root = Tk()
     root.geometry("400x100+200+300")
