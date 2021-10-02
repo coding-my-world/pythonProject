@@ -19,7 +19,7 @@ class Application(Frame):
     
         # 照片
         global photo # 把photo声明成全局变量
-        photo=PhotoImage(file="./srcs/img.png")
+        photo=PhotoImage(file="./srcs/img.gif")
         self.button2 = Button(root,image=photo,command=self.login)
         self.button2.pack()
         #self.button2.config(state="disabled")  # 设置按钮为禁用

@@ -1,5 +1,6 @@
 # 崔浩然
 # 时间:2021/8/8 10:50
+
 class person:
 
     def __new__(cls, *args, **kwargs):
