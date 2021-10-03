@@ -61,7 +61,7 @@ def get_weather(city_name):
     sleep(1)
     dl_list = bro.find_elements_by_xpath('//*[@id="body"]/div[6]/dl')
     weather_data = []
-    for i in range(0, 7):
+    for i in range(0,7):
         data = {}
     
         data['title'] = smart_wait(dl_list[i], './a', 'title')
