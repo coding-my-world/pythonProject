@@ -55,7 +55,7 @@ def get_weather(city_name):
     input_button.click()
     sleep(1)
     input = bro.find_element_by_id('serch_text')
-    input.send_keys('大同')
+    input.send_keys(city_name)
     search = bro.find_element_by_class_name('tianqi_search_btn')
     search.click()
     sleep(1)
@@ -69,8 +69,5 @@ def get_weather(city_name):
         data['text'] = data['text'].replace('\n', ' ')
         weather_data.append(data)
     return weather_data
-    sleep(2)
     bro.quit()
-weather_data1=get_weather('大同')
-for i in weather_data1:
-    print(i)
+

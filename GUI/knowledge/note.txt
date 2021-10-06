@@ -1,0 +1,12 @@
+组件对象的绑定
+     1.command属性绑定（适合简单不需要获取event对象）
+        Button（root，text=“登录”，command=login
+     2.通过bind（）方法绑定（适合需要获取event对象）
+     c1 = Canvas（）；
+     c1.bind("<Button-1",drawline)
+ 组件类的绑定
+    调用对象的bind_class函数，将该组件类所有的组件绑定时间：
+       w.bind_class("widght","event",eventhanler)
+
+       比如：btn01：bind_class("Button","<Button-1>",func)
+多种事件绑定

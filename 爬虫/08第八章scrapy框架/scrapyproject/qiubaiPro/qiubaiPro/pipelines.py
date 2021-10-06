@@ -6,7 +6,7 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-
+import pymysql
 class QiubaiproPipeline(object):
     fp = None
     
@@ -25,6 +25,26 @@ class QiubaiproPipeline(object):
         self.fp.write(author + ':' + content + '\n')
         return item
     
-    def closer_spider(self, spider):
+    def close_spider(self, spider):
         print('结束爬虫！')
         self.fp.close()
+        
+class mysqlPileLines(object):
+    conn = None
+    cursor = None
+    def open_spider(self,spider):
+        self.conn = pymysql.Connect(host='127.0.0.1',port=3306,user='root',password='root',db='qiubai1',charset='utf8')
+    def process_item(self,item,spider):
+        self.cursor = self.conn.cursor()
+        try:
+            self.cursor.execute('insert into qiubai values("%s","%s")'%(item["author"],item["content"]))
+            self.conn.commit()
+        except Exception as e:
+            print(e)
+            self.conn.rollback()
+        return item
+    
+    
+    def close_spider(self,spider):
+        self.cursor.close()
+        self.conn.close()

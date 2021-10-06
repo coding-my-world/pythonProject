@@ -1,6 +1,6 @@
 import scrapy
 from qiubaiPro.items import QiubaiproItem
-
+import pymysql
 # class QiubaiSpider(scrapy.Spider):
 #     name = 'qiubai'
 #     # allowed_domains = ['www.qiubai.com']
@@ -49,3 +49,4 @@ class QiubaiSpider(scrapy.Spider):
             item['content'] = content
             
             yield item # 将item提交给了管道
+            
