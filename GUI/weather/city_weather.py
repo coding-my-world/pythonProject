@@ -45,7 +45,7 @@ def get_weather(city_name):
     #无可视化界面（无头浏览器）
     bro.get('https://m.tianqi.com/')
     page_text=bro.page_source
-    sleep(1)
+    sleep(0.1)
     # 找到切换城市
     select_city = bro.find_element_by_xpath('//*[@id="body"]/div[5]/div[1]/div[1]/a')
     select_city.click()
@@ -53,12 +53,12 @@ def get_weather(city_name):
     # 找到输入城市按钮
     input_button = bro.find_element_by_name('keyword')
     input_button.click()
-    sleep(1)
+    sleep(0.1)
     input = bro.find_element_by_id('serch_text')
     input.send_keys(city_name)
     search = bro.find_element_by_class_name('tianqi_search_btn')
     search.click()
-    sleep(1)
+    sleep(0.1)
     dl_list = bro.find_elements_by_xpath('//*[@id="body"]/div[6]/dl')
     weather_data = []
     for i in range(0,7):

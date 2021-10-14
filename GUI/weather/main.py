@@ -8,7 +8,7 @@ if __name__ == "__main__":
     root.geometry("300x180+100+200")
     root.title("天气预报查询软件")
     root.resizable(False,False)
-    Login(root)
+    Login(root)           #先启动登录页面，再跳转主界面
     
     root.mainloop()
     

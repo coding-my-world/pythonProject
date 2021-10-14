@@ -13,6 +13,7 @@ class basedesk():
         self.root.minsize(260, 400)
         self.root.title('计算器')
         science(self.root)
+        
 class science():
     def __init__(self, master):
         self.master = master
@@ -259,9 +260,8 @@ def point():
     print('point')
 
     if save.count('.') >= 1:
-
         pass
-
+    
     else:
 
         if save == []:

@@ -27,7 +27,12 @@ scrapy框架
         -scrapy crawl first --nolog可以去除日志
         #显示指定类型的日志信息
         LOG_LEVEL = 'ERROR'
-
+   responsed的属性和方法
+        response.text  #获取的是响应的字符串
+        response。body #获取的是二进制数据
+        response.xpath #可以直接xpath方法来解析response中的内容
+        response.extract() 提取seletor对象的data属性值
+        response.extract_first() 提取的seletor列表的第一个数据
 -scrapy持久化存储
     -基于终端指令：
         -要求：只可以将parse方法的返回值存储到本地的文本文件中
@@ -59,3 +64,7 @@ scrapy框架
                 yield scrapy.Request(url,callback):callback专门用做于数据解析
 scrapy五大核心组件：
     spider，调度器，引擎，管道，下载器
+
+请求传参：
+    -使用场景：如果爬取解析的数据不在同一张页面中。（深度爬取）
+

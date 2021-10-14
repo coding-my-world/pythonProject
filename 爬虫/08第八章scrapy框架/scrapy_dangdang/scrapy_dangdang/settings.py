@@ -1,4 +1,4 @@
-# Scrapy settings for quanzhan project
+# Scrapy settings for scrapy_dangdang project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,19 +7,18 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'quanzhan'
+BOT_NAME = 'scrapy_dangdang'
 
-SPIDER_MODULES = ['quanzhan.spiders']
-NEWSPIDER_MODULE = 'quanzhan.spiders'
+SPIDER_MODULES = ['scrapy_dangdang.spiders']
+NEWSPIDER_MODULE = 'scrapy_dangdang.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
+#USER_AGENT = 'scrapy_dangdang (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
-LOG_LEVEL = 'ERROR'
+LOG_LEVEL = "WARNING"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -46,13 +45,13 @@ LOG_LEVEL = 'ERROR'
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'quanzhan.middlewares.QuanzhanSpiderMiddleware': 543,
+#    'scrapy_dangdang.middlewares.ScrapyDangdangSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'quanzhan.middlewares.QuanzhanDownloaderMiddleware': 543,
+#    'scrapy_dangdang.middlewares.ScrapyDangdangDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,9 +62,10 @@ LOG_LEVEL = 'ERROR'
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'quanzhan.pipelines.QuanzhanPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scrapy_dangdang.pipelines.ScrapyDangdangPipeline': 300,
+   'scrapy_dangdang.pipelines.DangDangDownloadPipline': 301,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
