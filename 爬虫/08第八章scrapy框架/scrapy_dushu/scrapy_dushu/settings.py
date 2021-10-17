@@ -64,7 +64,19 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'scrapy_dushu.pipelines.ScrapyDushuPipeline': 300,
+   'scrapy_dushu.pipelines.MysqlPipeline':301
 }
+
+LOG_FILE = 'logdemo.log'
+# LOG_LEVEL = 'ERROR'
+
+
+DB_HOST = 'localhost'
+DB_PORT = 3306
+DB_USER = 'root'
+DB_PASSWORD = 'root'
+DB_NAME = 'spider01'
+DB_CHARSET = 'utf8'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

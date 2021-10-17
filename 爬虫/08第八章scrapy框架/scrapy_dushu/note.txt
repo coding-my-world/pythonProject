@@ -3,3 +3,18 @@
     cd项目名字/项目名字/spiders
 
 3.scrapy genspider -t crawl 爬虫文件的名字 爬取的域名
+(1)日志级别：
+    CRITICAL：严重错误
+    ERROR：一般错误
+    WARNING：警告
+    INFO：一般信息
+    DEBUG：调试信息
+
+    默认的日志等级是DEBUG
+    只要出现了DEBUG或者DEBUG以上等级的日志
+    那么这些日志将会打印
+(2) settings.py 文件设置：
+    默认的级别为DEBUG，会显示上面所有的信息
+    在配置文件中 settings.py
+    LOG_LIFE :将屏幕显示的嘻嘻全部记录到文件中，屏幕不在显示，注意文件后缀是.log
+    LOG_LEVEL:设置日志显示的等级，就是显示那些，不显示哪些
