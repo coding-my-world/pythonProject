@@ -298,6 +298,8 @@ class MainGame():
                 elif isinstance(plant,Nut):
                     plant.display_nut()
             else:
+                sunflower_Sound = pygame.mixer.Sound('imgs/eat.mp3')
+                sunflower_Sound.play()
                 MainGame.plants_list.remove(plant)
     
     # 加载所有子弹的方法
