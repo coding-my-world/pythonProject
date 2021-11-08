@@ -13,7 +13,7 @@ selenium使用流程:
     编写基于浏览器自动化的操作代码
         -发送请求：get(url)
         -标签定位：find系列的方法
-        -标签交互：send——keys（‘XXX’）
+        -标签交互：send_keys（‘XXX’）
         执行js代码：excute_script('jsCode')
         -前进，后退：back（），forward（）
         -关闭浏览器：quit（）
