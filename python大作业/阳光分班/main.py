@@ -16,7 +16,7 @@ from show import *
 
 
 app = QApplication([])
-# os.system('python login.py')  #执行login_main.py文件
+os.system('python login.py')  #执行login_main.py文件
 Fenban = FenBan()
 Fenban.ui.show()
 app.exec_()

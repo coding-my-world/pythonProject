@@ -8,29 +8,24 @@
 # Author: diyun
 # time：2020.9.7
 
-from PyQt5.QtCore import Qt, pyqtSignal, QPoint
-from PyQt5.QtGui import QFont, QEnterEvent, QPainter, QColor, QPen
-from PyQt5.QtWidgets import QHBoxLayout, QLabel,QSpacerItem, QSizePolicy
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QTextEdit
-from qtpy import QtGui
+from PyQt5.QtCore import pyqtSignal, QPoint
+from PyQt5.QtGui import QEnterEvent, QPainter, QColor, QPen
+from PyQt5.QtWidgets import QHBoxLayout, QSpacerItem, QSizePolicy
 
 import sys
-import qdarkstyle
 from PyQt5.QtCore import QSize
-from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QComboBox
 from PyQt5.QtWidgets import QGridLayout
 from PyQt5.QtWidgets import QLineEdit
 from PyQt5.QtWidgets import QLabel
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QTextEdit
+
+from PyQt5.QtWidgets import QVBoxLayout, QPushButton
 
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 
-#from Header import TitleBar,FramelessWindow
+
 from qtpy import QtGui
 from PyQt5.QtGui import QFont
 
